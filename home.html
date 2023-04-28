@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Discord Coding Lounge</title>
+    <link rel="icon" type="image/x-icon" href="https://images-ext-1.discordapp.net/external/jgT0rbtvxgXsi_-I0nYTpQFRIZUoniaG4rL0_1qZYlQ/%3Fquality%3Dlossless/https/cdn.discordapp.com/emojis/791239903945162782.png" />
+</head>
+<body style="background-color: gainsboro; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
+
+    <div id="nav" style="background-color: cornflowerblue; padding: 25px; position: sticky; list-style: none; font-size: 23px; top:0">
+        <li>
+            <a href="home.html" style="text-decoration: none; color: whitesmoke; padding-left: 30px; padding-right: 200px; text-align:right" onmouseover="home(true)" onmouseleave="home(false)" id="home">Home</a>
+            <a href="applications.html" style="text-decoration: none; color: whitesmoke; padding-right: 200px;" onmouseover="applications(true)" onmouseleave="applications(false)" id="applications">Applications</a>
+            <a href="guide.html" style="text-decoration: none; color: whitesmoke; padding-right: 200px;" onmouseover="guide(true)" onmouseleave="guide(false)" id="guide">Application Guide</a>
+        </li>
+    </div>
+
+    <div style="text-align: left; padding: 25px; color: rgb(41, 41, 41);">
+        <h1 style="text-align: center; font-size: 60px;">The Discord Coding Lounge</h1>
+        <h2 style="font-size:35px;">We will help you with your programming journey...</h2>
+
+        <p style="font-size:20px;">
+            The Discord Coding Lounge is a community centered around coding and development.  We make developing discord bots simple & easy, as we provide tutorials, resources, and advanced coding help!
+        </p>
+    </div>
+
+    <h2 id="hover" style="color:whitesmoke; position: absolute; font-size: 20px;"></h2>
+
+    <div style="text-align: right; padding: 30px;">
+        <img src="https://media.discordapp.net/attachments/970775929972469779/1067986651424489533/Program.png" id="img" onmouseover="show(true);" onmouseleave="show(false);"/>
+    </div>
+
+
+ 
+</body>
+
+<script>
+
+    //nav bar highlight buttons
+    function home(high) {
+        
+        let e = document.getElementById('home');
+        if (high) {
+            e.style.color = "lightgray";
+        } else {
+            e.style.color = "whitesmoke";
+        }
+
+    }
+
+    function applications(high) {
+
+        let e = document.getElementById('applications');
+        if (high) {
+            e.style.color = "lightgray";
+        } else {
+            e.style.color = "whitesmoke";
+        }
+
+    }
+
+    function guide(high) {
+
+        let e = document.getElementById('guide');
+        if (high) {
+            e.style.color = "lightgray";
+        } else {
+            e.style.color = "whitesmoke";
+        }
+
+    }
+
+    //image hover 
+    function show(show) {
+        if (show) {
+            document.getElementById('hover').innerText = 'discord.gg/codinglounge';
+            document.addEventListener('mousemove', function (m) {
+                const element = document.querySelector('#hover');
+                element.style.left = m.clientX + 'px';
+                element.style.top = m.clientY + 'px';
+            });
+        } else {
+            document.getElementById('hover').innerText = ''
+        }
+    }
+
+</script>
+
+</html>
